@@ -20,7 +20,7 @@ let heightScroll = 0;
 let inputData = '';
 let page = 1;
 
-//------------------ form handle -------------------------
+//------------------ form handler -------------------------
 formElem.addEventListener('submit', handleFormSubmit);
 
 async function handleFormSubmit(event) {
@@ -42,7 +42,7 @@ async function handleFormSubmit(event) {
   showImagesOnPage();
 }
 
-//---------------------------------------------------------------
+//----------------- show images on page -------------------
 
 async function showImagesOnPage() {
   showLoader();
@@ -62,8 +62,6 @@ async function showImagesOnPage() {
     const images = data.hits;
     createGallery(images);
 
-    // await new Promise(resolve => setTimeout(resolve, 2000)); //?----
-
     liElem = document.querySelector('.gallery-item');
     heightScroll = liElem.getBoundingClientRect().height * 2;
 
@@ -77,8 +75,6 @@ async function showImagesOnPage() {
         position: 'topRight',
       });
     }
-
-    //
   } catch (error) {
     iziToast.warning({
       message: 'An error occurred. Please try again later.',
@@ -93,7 +89,6 @@ async function showImagesOnPage() {
 //-------------- click on btn load-more ------------------------
 loadMoreElem.addEventListener('click', async () => {
   page++;
-  console.log(inputData);
 
   hideLoadMoreButton();
   await showImagesOnPage();
