@@ -49,10 +49,19 @@
 }
 
 .gallery-item {
+  display: block;
   border: 1px solid #808080;
+  transition: all 250ms ease-in-out;
+  opacity: 0.9;
+}
+
+.gallery-item:hover {
+  opacity: 1;
+  scale: 1.03;
 }
 
 .gallery-link img {
+  cursor: zoom-in;
   width: 360px;
   height: 152px;
 
