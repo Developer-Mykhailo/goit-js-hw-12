@@ -19,6 +19,7 @@
   }
 }
 
+.load-more.hidden,
 .loader.hidden {
   display: none;
 }

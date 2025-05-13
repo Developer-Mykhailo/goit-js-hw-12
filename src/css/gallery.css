@@ -13,6 +13,7 @@
   margin-right: 8px;
 }
 
+.load-more,
 .form button {
   border: transparent;
   border-radius: 8px;
@@ -30,8 +31,13 @@
   transition: background-color 0.3s ease;
 }
 
+.load-more,
 .form button:hover {
   background-color: #6c8cff;
+}
+
+.load-more {
+  margin: 0 auto;
 }
 
 .gallery {
@@ -39,6 +45,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  margin-bottom: 15px;
 }
 
 .gallery-item {
